@@ -1,10 +1,5 @@
-//===ここから削除（トップページをリスト一覧画面にするため。未ログイン時はログイン画面に遷移します）===
-//Route::get('/', function () {
-//   return view('welcome');
-//});
-//===ここまで削除===
+<?php
 
-//===ここから追加===
 //リスト一覧画面
 Route::get('/','ListingsController@index');
 
