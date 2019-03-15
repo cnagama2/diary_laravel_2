@@ -17,7 +17,7 @@ Route::post('/listing/edit','ListingsController@update');
 
 //リスト削除処理
 Route::get('/listingsdelete/{listing_id}', 'ListingsController@destroy');
-//===ここまで追加===
+
 
 Auth::routes();
 
