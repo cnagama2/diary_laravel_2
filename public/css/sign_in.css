@@ -1,9 +1,16 @@
+.logo {
+  text-align: center;
+}
 .signinPage {
   margin-top: 10vh;
 }
 .signinPage .title {
   margin: 0;
   text-align: center;
+}
+.signinPage body {
+  background: url("../image/flower_top.jpg") 0 no-repeat;
+  background-size: cover;
 }
 .signinPage .new_user .form-group {
   max-width: 500px;

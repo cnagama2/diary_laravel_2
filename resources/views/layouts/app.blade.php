@@ -8,7 +8,7 @@
    <!-- CSRF Token -->
    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-   <title>Kanban</title>
+   <title>Diary</title>
 
    <!-- Styles(ローカルの場合、secure_asset=>assetにすること) -->
    <link href="{{ secure_asset('css/sign_up.css') }}" rel="stylesheet">

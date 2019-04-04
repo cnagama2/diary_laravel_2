@@ -1,9 +1,10 @@
 @extends('layouts.app')
+<div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 
 @section('content')
 <div class="signinPage">
  <div class="container">
-   <h2 class="title">kanbanにログイン</h2>
+   <h2 class="title">ログイン</h2>
    <div class="text-center m-3">or</div>
    <div class="text-center">
      <p class="acountPage_link"><a href="{{ route('register') }}">アカウントを作成</a></p>
@@ -36,4 +37,5 @@
    </form>
  </div>
 </div>
+
 @endsection

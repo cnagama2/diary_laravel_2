@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 
 @section('content')
 <div class="sinupPage">

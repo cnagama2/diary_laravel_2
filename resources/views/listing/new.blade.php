@@ -7,10 +7,9 @@
  <form action="{{ url('listings')}}" method="POST" class="form-horizontal">
  {{csrf_field()}}
    <div class="form-group">
-     <label for="listing" class="col-sm-3 control-label">新規作成</label>
-     <div class="col-md-6">
-       <textarea cols="300" rows="30" name="list_name" value="{{ old('list_name') }}" class="form-control">
-         </textarea>
+     <label for="listing" class="col-sm-3 control-label">リスト名</label>
+     <div class="col-sm-6">
+       <input type="text" name="list_name" class="form-control" value="{{ old('list_name') }}">
      </div>
    </div>
    <div class="form-group">
