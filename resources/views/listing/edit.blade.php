@@ -6,10 +6,11 @@
  <form action="{{ url('/listing/edit')}}" method="POST" class="form-horizontal">
    {{csrf_field()}}
      <div class="form-group">
-       <label for="listing" class="col-sm-3 control-label">リスト名</label>
-       <div class="col-sm-6">
+       <label for="listing" class="col-sm-3 control-label">日記編集</label>
+       <div class="col-md-6">
          <!-- リスト名 -->
-         <input type="text" name="list_name" value="{{ old('list_name', $listing->title) }}" class="form-control">
+         <textarea cols="300" rows="10" name="list_name" value="{{ old('list_name', $listing->title) }}" class="form-control">
+         </textarea>
        </div>
        <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
      </div>

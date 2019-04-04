@@ -1,17 +1,17 @@
 .topPage {
   min-height: 93vh;
   padding-top: 30px;
-  background: #bababa;
+  background: #fff;
   overflow-x: scroll;
 }
 .topPage .listWrapper {
-  display: flex;
+  display: table;
   height: 100%;
   align-items: baseline;
 }
 .topPage .listWrapper .list {
   position: relative;
-  background: #e2e4e6;
+  background: #fff;
   padding: 10px;
   margin-left: 20px;
   min-width: 250px;

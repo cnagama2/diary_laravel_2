@@ -37,7 +37,7 @@ class ListingsController extends Controller
    public function store(Request $request)
    {
        //バリデーション（入力値チェック）
-       $validator = Validator::make($request->all() , ['list_name' => 'required|max:255', ]);
+       $validator = Validator::make($request->all() , ['list_name' => 'required|max:2048', ]);
 
        //バリデーションの結果がエラーの場合
        if ($validator->fails())

@@ -1,5 +1,5 @@
 .header {
-  background: #026aa7;
+  background: #712827;
   padding: 10px;
 }
 .header .nav .header_menu {
@@ -31,10 +31,11 @@
   padding: 0;
   align-items: center;
 }
-.header .nav .header_menu_inner .listNew:after {
+.header .nav .header_menu_inner .listNew:before {
   font-family: "Font Awesome 5 Free";
-  content: "\f044";
+  content: "\f303";
+  font-weight: 900;
   display: inline-block;
-  margin-left: 10px;
+  margin-right: 5px;
   font-size: 20px;
 }
