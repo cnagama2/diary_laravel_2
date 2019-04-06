@@ -1,7 +1,9 @@
 @extends('layouts.app')
+<div class="container">
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
-
+</div>
 @section('content')
+
 <div class="signinPage">
  <div class="container">
    <h2 class="title">ログイン</h2>
@@ -37,5 +39,5 @@
    </form>
  </div>
 </div>
-
+</div>
 @endsection

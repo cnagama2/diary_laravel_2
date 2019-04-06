@@ -1,8 +1,10 @@
 @extends('layouts.app')
+<div class="container">
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
-
+</div>
 @section('content')
 <div class="sinupPage">
+<div class="container"> 
  <div class="titleArea">
    <h1>アカウントを新規作成</h1>
    <div class="m-3">or</div>
@@ -49,5 +51,6 @@
        </div>
    </form>
  </div>
+</div>
 </div>
 @endsection

@@ -1,6 +1,16 @@
 .logo {
  text-align:center;
 }
+
+  .container {
+   padding: 10px 1px;
+   background-color:#fff;
+   width: 500px;
+   opacity: 0.8;
+   margin:100px 300px;
+  }
+
+
 .signinPage {
  margin-top: 10vh;
  .title {
@@ -8,12 +18,7 @@
    text-align: center;
 }
    
-body {
- background:url("../image/flower_top.jpg") 0 no-repeat;
- background-size:cover;
- }
- 
- .new_user {
+.new_user {
    .form-group {
      max-width: 500px;
      margin: 0 auto 1rem;

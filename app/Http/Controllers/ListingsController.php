@@ -20,7 +20,7 @@ class ListingsController extends Controller
    public function index()
    {
        $listings = Listing::where('user_id', Auth::user()->id)
-           ->orderBy('created_at', 'asc')
+           ->orderBy('created_at', 'desc')
            ->get();
 
         // テンプレート「listing/index.blade.php」を表示します。

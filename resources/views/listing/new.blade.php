@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+
 @section('content')
 <div class="panel-body">
 <!-- バリデーションエラーの場合に表示 -->
@@ -6,10 +8,15 @@
  <!-- リスト作成フォーム -->
  <form action="{{ url('listings')}}" method="POST" class="form-horizontal">
  {{csrf_field()}}
+ <div class="form-group">
+  <div class="flatpickr">
+                <input type="text" id="flatpickr" placeholder="Select Date..">
+                </div>
+                
    <div class="form-group">
-     <label for="listing" class="col-sm-3 control-label">リスト名</label>
-     <div class="col-sm-6">
-       <input type="text" name="list_name" class="form-control" value="{{ old('list_name') }}">
+     <label for="listing" class="col-sm-3 control-label">新規作成</label>
+     <div class="col-md-8">
+       <textarea name="list_name" class="form-control" value="{{ old('list_name') }}"></textarea>
      </div>
    </div>
    <div class="form-group">
@@ -21,3 +28,4 @@
  </form>
 </div>
 @endsection
+
