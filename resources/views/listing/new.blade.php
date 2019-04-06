@@ -2,6 +2,7 @@
 
 
 @section('content')
+<div style="background-color:#ffffff;">
 <div class="panel-body">
 <!-- バリデーションエラーの場合に表示 -->
 @include('common.errors')
@@ -28,4 +29,5 @@
  </form>
 </div>
 @endsection
+</div>
 
