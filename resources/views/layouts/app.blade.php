@@ -33,12 +33,9 @@
    <!--JS -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
    <!--flatpickr-->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
 
 </head>
 <body>
@@ -72,13 +69,5 @@
 
 @endauth
 @yield('content')
-<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-<script>
-const flatpickr = require("flatpickr");
-flatpickr(document.getElementById('due_date'),  {
- locale:"ja",
- dateFormat: "Y/m/d"
-});
-</script>
 </body>
 </html>
