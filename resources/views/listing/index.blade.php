@@ -4,7 +4,14 @@
 <div class="container">
   <div class="row">
     <div class="panel panel-default">
-     <div class="panel-heading" >一覧</div>
+     <div class="panel-heading" >
+     <div class="text-center">
+      <button type="submit" class="btn btn-default">
+      <a href="{{ route('new') }}" >
+            <i class="glyphicon glyphicon-plus"></i>新規作成</button>
+      </a>
+    </div>
+    </div>
       <table class="table">
         <tbody>
             @foreach($listings as $listing)
@@ -19,11 +26,7 @@
             @endforeach
         </tbody>
       </table>
-    <div class="panel-footer">
-      <a href="{{ route('new') }}" class="btn btn-default btn-block">
-                新規作成
-      </a>
-    </div>
+    
    </div>
   </div>
 </div>

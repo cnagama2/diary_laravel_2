@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Listing;
 use Auth;
 use Validator;
+use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -22,6 +23,9 @@ class ListingsController extends Controller
        $listings = Listing::where('user_id', Auth::user()->id)
            ->orderBy('created_at', 'desc')
            ->get();
+           
+       $dt = Carbon::now();
+       
 
         // テンプレート「listing/index.blade.php」を表示します。
        return view('listing/index', ['listings' => $listings]);
@@ -37,7 +41,7 @@ class ListingsController extends Controller
    public function store(Request $request)
    {
        //バリデーション（入力値チェック）
-       $validator = Validator::make($request->all() , ['list_name' => 'required|max:2048', ]);
+       $validator = Validator::make($request->all() , ['list_name' => 'required', ]);
 
        //バリデーションの結果がエラーの場合
        if ($validator->fails())
@@ -65,7 +69,7 @@ class ListingsController extends Controller
    public function update(Request $request)
    {
        //バリデーション（入力値チェック）
-       $validator = Validator::make($request->all() , ['list_name' => 'required|max:255', ]);
+       $validator = Validator::make($request->all() , ['list_name' => 'required', ]);
 
        //バリデーションの結果がエラーの場合
        if ($validator->fails())
