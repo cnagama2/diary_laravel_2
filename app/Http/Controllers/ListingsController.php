@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Listing;
 use Auth;
 use Validator;
+
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
@@ -23,9 +24,6 @@ class ListingsController extends Controller
        $listings = Listing::where('user_id', Auth::user()->id)
            ->orderBy('created_at', 'desc')
            ->get();
-           
-       $dt = Carbon::now();
-       
 
         // テンプレート「listing/index.blade.php」を表示します。
        return view('listing/index', ['listings' => $listings]);
@@ -33,6 +31,7 @@ class ListingsController extends Controller
    
    public function new()
    {
+        
         // テンプレート「listing/new.blade.php」を表示します。
        return view('listing/new');
 
@@ -53,7 +52,8 @@ class ListingsController extends Controller
        $listings = new Listing;
        $listings->title = $request->list_name;
        $listings->user_id = Auth::user()->id;
-
+       $now = Carbon::now();
+       
        $listings->save();
        // 「/」 ルートにリダイレクト
        return redirect('/');

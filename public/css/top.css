@@ -1,6 +1,6 @@
 .topPage {
   min-height: 93vh;
-  padding-top: 30px;
+  padding-top: 10px;
   background: #fff;
   overflow-x: scroll;
 }
@@ -33,7 +33,7 @@
   margin-right: 10px;
 }
 .topPage .listWrapper .list_header_action .fa-pen, .topPage .listWrapper .list_header_action .fa-trash {
-  font-size: 18px;
+  font-size: 20px;
   color: #8c8c8c;
 }
 .topPage .listWrapper .list .cardWrapper {

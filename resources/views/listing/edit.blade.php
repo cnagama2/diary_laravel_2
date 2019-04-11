@@ -17,8 +17,8 @@
                  />
              </div>
              <div class="form-group">
-               <div class="panel-heading">編集</div>
-                 <textarea rows="100" name="list_name" class="form-control">{{ old('list_name', $listing->title) }}</textarea>
+               <div class="panel-heading"></div>
+                 <textarea rows="40" name="list_name" class="form-control">{{ old('list_name', $listing->title) }}</textarea>
                </div>
                  <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
                </div>
