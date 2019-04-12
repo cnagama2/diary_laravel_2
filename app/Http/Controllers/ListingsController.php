@@ -21,10 +21,9 @@ class ListingsController extends Controller
    public function index()
    {
        $listings = Listing::where('user_id', Auth::user()->id)
-           ->orderBy('created_at', 'desc')
-           ->paginate(10);
-           // ->get();
-           
+           ->orderBy('due_date', 'desc')
+           ->get();
+
 
         // テンプレート「listing/index.blade.php」を表示します。
        return view('listing/index', ['listings' => $listings]);
@@ -41,7 +40,7 @@ class ListingsController extends Controller
    public function store(Request $request)
    {
        //バリデーション（入力値チェック）
-       $validator = Validator::make($request->all() , ['list_name' => 'required', ]);
+       $validator = Validator::make($request->all() , ['list_name' => 'required',]);
 
        //バリデーションの結果がエラーの場合
        if ($validator->fails())

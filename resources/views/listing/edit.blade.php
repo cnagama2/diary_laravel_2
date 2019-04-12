@@ -12,7 +12,7 @@
           <form action="{{ url('/listing/edit')}}" method="POST" class="form-horizontal">
                {{csrf_field()}}
              <div class="form-group">
-                <label for="due_date">日時</label>
+                <label for="due_date">日時変更</label>
                 <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date', $listing->due_date) }}"
                  />
              </div>

@@ -5,21 +5,20 @@
 <div class="container">
   <div class="row">
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading">今日は
       <?php 
-      $date = new DateTime('now');
-      echo $date -> format("Y/m/d H:i:s"); 
-?>
-
-の日記</div>
+      $dt = new DateTime('now');
+      echo $dt -> format('n月j日( D )'); 
+      ?>
+      です。</div>
         <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')           
           <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
               {{csrf_field()}}
-              <div class="form-group">
-                <label for="due_date">日時</label>
-                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}"
+<div class="form-group">
+                <label for="due_date">日時変更</label>
+                <input type="text" class="form-control" name="due_date" id="due_date" value="<?php echo date('Y-m-j');?>"
                  />
              </div>
               <div class="form-group">
