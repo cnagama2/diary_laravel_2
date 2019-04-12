@@ -5,12 +5,23 @@
 <div class="container">
   <div class="row">
     <div class="panel panel-default">
-      <div class="panel-heading">今日の日記</div>
+      <div class="panel-heading">
+      <?php 
+      $date = new DateTime('now');
+      echo $date -> format("Y/m/d H:i:s"); 
+?>
+
+の日記</div>
         <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')           
           <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
               {{csrf_field()}}
+              <div class="form-group">
+                <label for="due_date">日時</label>
+                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}"
+                 />
+             </div>
               <div class="form-group">
                 <textarea rows="40" class="form-control" name="list_name" value="{{ old('title') }}" ></textarea>
               </div>
@@ -26,4 +37,13 @@
     </div>
   </div>
 </div>
+<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+  <script>
+    /* global flatpickr */
+      flatpickr(document.getElementById('due_date'), {
+         locale:"ja",
+         dateFormat: "Y-m-d",
+    });
+  </script>
 @endsection

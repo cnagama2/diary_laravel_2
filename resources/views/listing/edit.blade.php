@@ -12,8 +12,8 @@
           <form action="{{ url('/listing/edit')}}" method="POST" class="form-horizontal">
                {{csrf_field()}}
              <div class="form-group">
-                <label for="made_date">日時</label>
-                <input type="text" class="form-control" name="made_date" id="made_date" value="日時を変更する場合は選択してください"
+                <label for="due_date">日時</label>
+                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date', $listing->due_date) }}"
                  />
              </div>
              <div class="form-group">
@@ -36,9 +36,9 @@
 <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
   <script>
     /* global flatpickr */
-      flatpickr(document.getElementById('made_date'), {
+      flatpickr(document.getElementById('due_date'), {
          locale:"ja",
-         dateFormat: "Y/m/d",
+         dateFormat: "Y-m-d",
     });
   </script>
 @endsection

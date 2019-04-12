@@ -6,7 +6,6 @@ use App\Listing;
 use Auth;
 use Validator;
 
-use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -23,7 +22,9 @@ class ListingsController extends Controller
    {
        $listings = Listing::where('user_id', Auth::user()->id)
            ->orderBy('created_at', 'desc')
-           ->get();
+           ->paginate(10);
+           // ->get();
+           
 
         // テンプレート「listing/index.blade.php」を表示します。
        return view('listing/index', ['listings' => $listings]);
@@ -51,9 +52,9 @@ class ListingsController extends Controller
        // Listingモデル作成
        $listings = new Listing;
        $listings->title = $request->list_name;
+       $listings->due_date = $request->due_date;
        $listings->user_id = Auth::user()->id;
-       $now = Carbon::now();
-       
+
        $listings->save();
        // 「/」 ルートにリダイレクト
        return redirect('/');
@@ -79,6 +80,7 @@ class ListingsController extends Controller
 
        $listing = Listing::find($request->id);
        $listing->title = $request->list_name;
+       $listing->due_date = $request->due_date;
        $listing->save();
        return redirect('/');
    }
