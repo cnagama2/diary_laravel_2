@@ -13,7 +13,7 @@
       です。</div>
         <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
-          @include('common.errors')           
+          @include('common.errors')
           <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
               {{csrf_field()}}
 <div class="form-group">

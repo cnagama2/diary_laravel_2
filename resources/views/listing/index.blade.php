@@ -15,7 +15,7 @@
         <tbody>
             @foreach($listings as $listing)
               <tr>
-                <td>{{ $listing->due_date }}
+                <td>{{ $listing->due_date->format('n月j日( D )') }}
                 </td>
                 <td>{{ $listing->title }}</td>
                 <td><a href="{{ url('/listingsedit', $listing->id) }}"><i class="fas fa-pen"></i> 編集</a>
