@@ -17,6 +17,16 @@ class Listing extends Model
         'updated_at',
         'deleted_at'
 ];
+
+    protected $table = 'listings';
+
+    protected $guarded = array('id');
+
+    public $timestamps = true;
+
+    protected $fillable = [
+    'title', 'user_id', 'due_date', 
+    ];
 }
 
 

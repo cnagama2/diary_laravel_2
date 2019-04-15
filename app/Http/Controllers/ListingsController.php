@@ -6,6 +6,7 @@ use App\Listing;
 use Auth;
 use Validator;
 
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -22,7 +23,7 @@ class ListingsController extends Controller
    {
        $listings = Listing::where('user_id', Auth::user()->id)
            ->orderBy('due_date', 'desc')
-           ->get();
+           ->paginate(15);
 
 
         // テンプレート「listing/index.blade.php」を表示します。
