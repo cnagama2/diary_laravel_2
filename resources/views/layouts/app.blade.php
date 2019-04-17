@@ -40,7 +40,7 @@
 <body>
 <!-- ログインしている場合のみヘッダを表示する --->
 @auth
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #712827;">
  <div class ="container-fluid">
  <div class="navbar-header">
   <span class="navbar-brand">Diary</span>
@@ -67,6 +67,7 @@
              </form></li>
     </ul>
   </div></div>
+ 
 </nav>
 
 

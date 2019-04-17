@@ -22,7 +22,7 @@ body {
   color: #fff;
   width: 200px;
   margin-top: 20px;
-  
+  padding: 10px;
   border-radius: 90px;
   transition: opacity 0.5s;
 }

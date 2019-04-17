@@ -7,8 +7,13 @@
      <div class="panel-heading" >
       <button type="submit" class="btn btn-default">
       <a href="{{ route('new') }}" >
-            <i class="glyphicon glyphicon-plus"></i> 新規作成</button>
-      </a>
+            <i class="glyphicon glyphicon-plus"></i> 新規作成</button></a>
+        {{ $listings->links() }}
+        
+        <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
      </div>
     </div>
       <table class="table">
