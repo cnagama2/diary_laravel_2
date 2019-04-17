@@ -40,31 +40,35 @@
 <body>
 <!-- ログインしている場合のみヘッダを表示する --->
 @auth
-<header class="header">
- <nav class="nav">
-   <ul class="header_menu">
-     <li class="nav-link">{{Auth::user()->name }}さん</li>
-     <li class="header_menu_title">
-         <a class="nav-link listNew" href="/">Diary</a>
-     </li>
-     <li>
-       <ul class="header_menu_inner">
-         <li>
-             <a class="nav-link listNew" href="{{ route('new') }}">日記を書く</a>　　
-         </li>
-         <li>
-             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-               <i class="glyphicon glyphicon-log-out"></i>ログアウト
-             </a>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class ="container-fluid">
+ <div class="navbar-header">
+  <span class="navbar-brand">Diary</span>
+  
+  
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+      <span class="sr-only">メニュー</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+ 
+  <div id="gnavi" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right ">
+      <li><a class="nav-link" href="#">{{Auth::user()->name }}さん</a></li>
+      <li><a class="nav-link listNew" href="/">Diary 一覧</a></li>
+      <li><a class="nav-link listNew" href="{{ route('new') }}">日記を書く</a></li>
+      <li><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+             <i class="glyphicon glyphicon-log-out"></i>ログアウト</a>
              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                {{ csrf_field() }}
-             </form>
-         </li>
-       </ul>
-     </li>
-   </ul>
- </nav>
-</header>
+             </form></li>
+    </ul>
+  </div></div>
+</nav>
+
 
 @endauth
 @yield('content')
