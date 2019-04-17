@@ -1,11 +1,11 @@
 @extends('layouts.app')
-<div class="container">
+<div class="container_login">
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 </div>
 @section('content')
 
 <div class="signinPage">
- <div class="container">
+ <div class="container_login">
    <h2 class="title">ログイン</h2>
    <div class="text-center m-3">or</div>
    <div class="text-center">

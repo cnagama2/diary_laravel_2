@@ -41,14 +41,11 @@
 <!-- ログインしている場合のみヘッダを表示する --->
 @auth
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #712827;">
- <div class ="container-fluid">
+ <div class ="container">
  <div class="navbar-header">
   <span class="navbar-brand">Diary</span>
-  
-  
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
       <span class="sr-only">メニュー</span>
-      <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -56,7 +53,7 @@
   </div>
  
   <div id="gnavi" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-right ">
+    <ul class="nav navbar-nav navbar-right">
       <li><a class="nav-link" href="#">{{Auth::user()->name }}さん</a></li>
       <li><a class="nav-link listNew" href="/">Diary 一覧</a></li>
       <li><a class="nav-link listNew" href="{{ route('new') }}">日記を書く</a></li>

@@ -1,16 +1,15 @@
 @extends('layouts.app')
-<div class="container">
+<div class="container_login">
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 </div>
 @section('content')
 <div class="sinupPage">
-<div class="container"> 
+<div class="container_login"> 
  <div class="titleArea">
    <h1>アカウントを新規作成</h1>
    <div class="m-3">or</div>
      <p class="acountPage_link"><a href="{{ route('login') }}">アカウントにサインイン</a></p>
-   </div>
-   <div class="container">
+   
      <form class="mt-5, signupForm" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
        {{ csrf_field() }}
        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

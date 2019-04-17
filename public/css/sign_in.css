@@ -1,12 +1,12 @@
 .logo {
   text-align: center;
 }
-.container {
-  padding: 10px 1px;
+.container_login {
+  padding: 30px 30px;
   background-color: #fff;
   width: 500px;
   opacity: 0.8;
-  margin: 100px 300px;
+  margin: 50px 150px;
 }
 .signinPage {
   margin-top: 10vh;
