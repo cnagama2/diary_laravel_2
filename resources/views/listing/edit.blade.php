@@ -23,10 +23,11 @@
                  <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
                </div>
                <div class="panel-footer">
+                   <div class="text-center">
                  <button type="submit" class="btn btn-default">
                    <i class="glyphicon glyphicon-saved"></i> 更新
                  </button>
-               </div>
+               </div></div>
            </div>
          </form>
         </div>
