@@ -13,14 +13,10 @@
    <!-- Styles(ローカルの場合、secure_asset=>assetにすること) -->
    <link href="{{ secure_asset('css/sign_up.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/sign_in.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/top.css') }}" rel="stylesheet">
+   {{--<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">--}}
    <link href="{{ secure_asset('css/button.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/common.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/header.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/card_edit.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/card_new.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/card_show.css') }}" rel="stylesheet">
+   <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/list_new.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/list_edit.css') }}" rel="stylesheet">
 
@@ -40,7 +36,7 @@
 <body>
 <!-- ログインしている場合のみヘッダを表示する --->
 @auth
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #712827;">
+<nav class="navbar navbar-inverse navbar-fixed-top">
  <div class ="container">
  <div class="navbar-header">
   <span class="navbar-brand">Diary</span>

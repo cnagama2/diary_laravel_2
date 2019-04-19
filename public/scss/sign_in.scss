@@ -10,12 +10,20 @@
    opacity: 0.8;
    margin:0 auto;
   }
-
-.login {
- background:url("../image/flower_top.jpg") 0 no-repeat;
- background-size:cover;
+/* ▼共通装飾(兼モバイル用) */
+body {
+   background-color: #90ee9;
+   background:url("../image/flower_top_small.jpg") 0 no-repeat;
+   background-size:cover;
 }
 
+ /* ▼広い画面用 */   
+@media (min-width: 1280px) {
+body {
+   background:url("../image/flower_top_large.jpg") 0 no-repeat;
+      }
+}   
+   
 .signinPage {
  
  margin-top: 10vh;
