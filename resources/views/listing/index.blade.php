@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<div style="background-color:#ffffff;">
 <div id="wrapper">
- <div class="container_login">
+ <div class="container">
   <div class="row">
     <div class="col-xs-3">
       <button type="submit" class="btn btn-default">

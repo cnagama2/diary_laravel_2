@@ -3,7 +3,7 @@
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 </div>
 @section('content')
-
+<div class="login">
 <div class="signinPage">
  <div class="container_login">
    <h2 class="title">ログイン</h2>
@@ -38,6 +38,7 @@
      </div>
    </form>
  </div>
+</div>
 </div>
 </div>
 @endsection

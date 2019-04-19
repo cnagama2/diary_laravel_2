@@ -6,28 +6,29 @@
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">編集</div>
+      
         <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')
           <form action="{{ url('/listing/edit')}}" method="POST" class="form-horizontal">
                {{csrf_field()}}
              <div class="form-group">
+                 <div class="text-center">
+                 <button type="submit" class="btn btn-default">
+                   <i class="glyphicon glyphicon-saved"></i> 更新
+                 </button>
+               </div>
                 <label for="due_date">日時変更</label>
                 <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date', $listing->due_date) }}"
                  />
              </div>
              <div class="form-group">
                <div class="panel-heading"></div>
-                 <textarea rows="40" name="list_name" class="form-control">{{ old('list_name', $listing->title) }}</textarea>
+                 <textarea rows="20" name="list_name" class="form-control">{{ old('list_name', $listing->title) }}</textarea>
                </div>
                  <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
                </div>
-               <div class="panel-footer">
-                   <div class="text-center">
-                 <button type="submit" class="btn btn-default">
-                   <i class="glyphicon glyphicon-saved"></i> 更新
-                 </button>
-               </div></div>
+               
            </div>
          </form>
         </div>
