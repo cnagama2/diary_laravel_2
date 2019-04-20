@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div style="background-color:#ffffff;">
- 
- <div class="container">
+<div class="container">
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">編集</div>

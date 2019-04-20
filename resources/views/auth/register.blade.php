@@ -2,6 +2,7 @@
 <div class="container_login">
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 </div>
+<body class="bgImg">
 @section('content')
 <div class="container_login">
 <div class="signupPage">
@@ -55,3 +56,4 @@
 </div>
 </div>
 @endsection
+</body>
