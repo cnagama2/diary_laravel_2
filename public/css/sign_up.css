@@ -1,5 +1,15 @@
-body {
-  overflow: visible;
+/* ▼共通装飾(兼モバイル用) */body {
+  background-color: #90ee90;
+  background: url("../image/flower_top_small.jpg") 0 no-repeat;
+  background-size: cover;
+}
+/* ▼広い画面用 */@media (min-width: 1280px) {
+  body {
+    background: url("../image/flower_top_large.jpg") 0 no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 .sinupPage {
   margin-top: 10vh;
@@ -8,7 +18,7 @@ body {
   text-align: center;
 }
 .sinupPage .titleArea h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .sinupPage .signupForm .form-group {
   margin: 0 auto 1.5rem auto;

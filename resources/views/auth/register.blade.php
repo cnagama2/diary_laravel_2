@@ -3,18 +3,20 @@
 <div class="logo"><img src="{{ asset('image/logo1.png') }}" alt="logo"></div>
 </div>
 @section('content')
-<div class="sinupPage">
-<div class="container_login"> 
+<div class="container_login">
+<div class="signupPage">
  <div class="titleArea">
    <h1>アカウントを新規作成</h1>
    <div class="m-3">or</div>
      <p class="acountPage_link"><a href="{{ route('login') }}">アカウントにサインイン</a></p>
+   </div>
    
      <form class="mt-5, signupForm" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
        {{ csrf_field() }}
        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
          <label for="user_name">お名前</label>
          <input class="form-control" placeholder="名前を入力してください" type="text" name="name" value="{{ old('name') }}" required autofocus>
+
          @if ($errors->has('name'))
            <span class="help-block">
              <strong>{{ $errors->first('name') }}</strong>
@@ -49,7 +51,7 @@
          <input type="submit" name="commit" value="アカウントを作成" class="btn submitBtn" data-disable-with="アカウントを作成">
        </div>
    </form>
- </div>
+
 </div>
 </div>
 @endsection

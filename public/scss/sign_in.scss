@@ -12,8 +12,9 @@
   }
 /* ▼共通装飾(兼モバイル用) */
 body {
-   background-color: #90ee9;
+   background-color: #90ee90;
    background:url("../image/flower_top_small.jpg") 0 no-repeat;
+   
    background-size:cover;
 }
 
@@ -21,17 +22,19 @@ body {
 @media (min-width: 1280px) {
 body {
    background:url("../image/flower_top_large.jpg") 0 no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   background-size:cover;
       }
 }   
    
 .signinPage {
- 
  margin-top: 10vh;
  .title {
    margin: 0;
    text-align: center;
-}
-   
+ }
+ 
 .new_user {
    .form-group {
      max-width: 500px;
