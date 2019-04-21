@@ -2,14 +2,15 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="panel panel-default">
-      <div class="panel-heading">今日は
-      <?php 
-      $dt = new DateTime('now');
-      echo $dt -> format('n月j日( D )'); 
-      ?>です。
-      </div>
-        <div class="panel-body">
+    <ul class="indexbar">
+      <li class="index_head">今日は
+        <?php 
+        $dt = new DateTime('now');
+        echo $dt -> format('n月j日( D )'); 
+        ?>です。
+      </li>
+    </ul>
+      <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')
           <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >

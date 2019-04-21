@@ -4,15 +4,16 @@
 </div>
 <body class="bgImg">
 @section('content')
-<div class="container_login">
-<div class="signupPage">
- <div class="titleArea">
-   <h1>アカウントを新規作成</h1>
-   <div class="m-3">or</div>
+<div class="login">
+<div class="signinPage">
+ <div class="container_login">
+   <h2 class="text-center title">アカウント作成</h2>
+   <div class="text-center m-3">or</div>
+   <div class="text-center">
      <p class="acountPage_link"><a href="{{ route('login') }}">アカウントにサインイン</a></p>
    </div>
    
-     <form class="mt-5, signupForm" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
+     <form class="new_user" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
        {{ csrf_field() }}
        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
          <label for="user_name">お名前</label>
@@ -49,10 +50,11 @@
          <input class="form-control" placeholder="パスワードを再度入力してください" autocomplete="off" type="password" name="password_confirmation" required>
        </div>
        <div class="text-center">
-         <input type="submit" name="commit" value="アカウントを作成" class="btn submitBtn" data-disable-with="アカウントを作成">
+         <input type="submit" name="commit" value="アカウントを作成" class="loginBtn" data-disable-with="アカウントを作成">
        </div>
    </form>
-
+</div>
+</div>
 </div>
 </div>
 @endsection

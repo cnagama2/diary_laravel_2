@@ -33,7 +33,6 @@
            </span>
        @endif
      </div>
-
      <div class="form-group text-center">
        <input type="submit" name="commit" value="ログインする" class="loginBtn" data-disable-with="ログインする">
      </div>

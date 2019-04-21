@@ -2,9 +2,10 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="panel panel-default">
-      <div class="panel-heading">編集
-      </div>
+    <ul class="indexbar">
+      <li class="index_head">編集
+      </li>
+    </ul>
       <div class="panel-body">
         <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')

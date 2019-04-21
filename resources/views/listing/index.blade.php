@@ -2,21 +2,19 @@
 @section('content')
  <div class="container">
   <div class="row">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <div class="index"><button type="submit" class="btn btn-default">
+    <ul class="indexbar">
+        <li class="index_item"><button type="submit" class="btn btn-default">
       <a href="{{ route('new') }}" ><i class="glyphicon glyphicon-plus"></i> 新規作成</button></a>
-        </div>
-        <div class="index">{{ $listings->links() }}</div>
-      </div>
-    </div>
+        </li>
+        <li class="index_item">{{ $listings->links() }}</li>
+      </ul>
    <table class="table table-hover return-table-responsive">  
       <tbody>
             @foreach($listings as $listing)
               <tr>
-                <td>
+                <th>
                   {{ $listing->due_date->format('y年n月j日( D )') }}
-                </td>
+                </th>
                 <td>
                   {{ $listing->title }}
                 </td>
