@@ -2,12 +2,14 @@
 @section('content')
  <div class="container">
   <div class="row">
-    <div class="col-xs-3">
-      <button type="submit" class="btn btn-default">
-      <a href="{{ route('new') }}" >
-            <i class="glyphicon glyphicon-plus"></i> 新規作成</button></a></div>
-    <div class="col-xs-9 col-md-7">{{ $listings->links() }}</div>
-  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="index"><button type="submit" class="btn btn-default">
+      <a href="{{ route('new') }}" ><i class="glyphicon glyphicon-plus"></i> 新規作成</button></a>
+        </div>
+        <div class="index">{{ $listings->links() }}</div>
+      </div>
+    </div>
    <table class="table table-hover return-table-responsive">  
       <tbody>
             @foreach($listings as $listing)
@@ -27,12 +29,9 @@
                 </td>
               </tr>
             @endforeach
-        
       </tbody>
     </table>
-  </div>
+    </div>
+      <div class="index">{{ $listings->links() }}</div>
  </div>
-
-
-
 @endsection
