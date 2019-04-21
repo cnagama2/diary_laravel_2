@@ -7,9 +7,8 @@
       <?php 
       $dt = new DateTime('now');
       echo $dt -> format('n月j日( D )'); 
-      ?>
-      です。</div>
-    </div>
+      ?>です。
+      </div>
         <div class="panel-body">
           <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')
@@ -27,9 +26,8 @@
               <div class="form-group">
                 <textarea rows="20" class="form-control" name="list_name" value="{{ old('title') }}" ></textarea>
               </div>
-            
+            </div>
           </form>
-        </div>
       </div>
     </div>
   </div>
