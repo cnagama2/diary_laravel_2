@@ -16,15 +16,9 @@
                   {{ $listing->due_date->format('y年n月j日( D )') }}
                 </th>
                 <td>
-                  {{ $listing->title }}
-                </td>
-                <td>
-                  <a href="{{ url('/listingsedit', $listing->id) }}"><i class="fas fa-pen"></i> 編集</a>
+                  <a href="{{ url('/listingsedit', $listing->id) }}">{{ $listing->title }}</a>
             　　</td>
-                <td>
-                  <a onclick="return confirm('{{ $listing->title }}を削除して大丈夫ですか？')"
-                        href="{{ url('/listingsdelete', $listing->id) }}"><i class="fas fa-trash"></i></a>
-                </td>
+                
               </tr>
             @endforeach
       </tbody>
