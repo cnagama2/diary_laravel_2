@@ -39,7 +39,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #712827;">
  <div class ="container">
  <div class="navbar-header">
-  <span class="navbar-brand">Diary</span>
+  <span class="navbar-brand">DIARY
+  </span>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
       <span class="sr-only">メニュー</span>
       <span class="icon-bar"></span>

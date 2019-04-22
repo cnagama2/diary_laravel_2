@@ -21,7 +21,7 @@
              <a onclick="return confirm('{{ $listing->title }}を削除して大丈夫ですか？')"
                         href="{{ url('/listingsdelete', $listing->id) }}">
                  <button type="submit" class="btn btn-default">
-                <i class="glyphicon glyphicon-saved"></i> 削除</a>
+                <i class="glyphicon glyphicon-trash"></i> 削除</button></a>
              </li>
              </ul>
              <label for="due_date">日時変更</label>

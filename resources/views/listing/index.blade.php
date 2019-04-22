@@ -9,19 +9,22 @@
         <li class="index_item">{{ $listings->links() }}</li>
       </ul>
    <table class="table table-hover return-table-responsive">  
-      <tbody>
+      
             @foreach($listings as $listing)
               <tr>
                 <th>
                   {{ $listing->due_date->format('y年n月j日( D )') }}
                 </th>
+              </tr>
+      
+        <tr>
                 <td>
                   <a href="{{ url('/listingsedit', $listing->id) }}">{{ $listing->title }}</a>
             　　</td>
                 
               </tr>
             @endforeach
-      </tbody>
+      
     </table>
     </div>
       <div class="index">{{ $listings->links() }}</div>
