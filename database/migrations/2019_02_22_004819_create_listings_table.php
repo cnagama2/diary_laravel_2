@@ -16,8 +16,10 @@ class CreateListingsTable extends Migration
        Schema::create('listings', function (Blueprint $table) {
            $table->increments('id');
            //===== ここから =====
-           $table->string('title');
+           $table->longText('title');
+           $table->date('due_date')->nullable();
            $table->integer('user_id');
+           $table->date('deleted_at')->nullable();
            //===== ここまでを追加 =====
            $table->timestamps();
        });
