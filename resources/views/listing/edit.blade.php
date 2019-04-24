@@ -18,7 +18,7 @@
                 <i class="glyphicon glyphicon-saved"></i> 更新
               </button></li>
              <li class="index_item">
-             <a onclick="return confirm('{{ $listing->title }}を削除して大丈夫ですか？')"
+             <a onclick="return confirm('削除してよろしいですか？')"
                         href="{{ url('/listingsdelete', $listing->id) }}">
                  <button type="submit" class="btn btn-default">
                 <i class="glyphicon glyphicon-trash"></i> 削除</button></a>
