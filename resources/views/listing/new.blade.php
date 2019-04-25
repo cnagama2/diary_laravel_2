@@ -16,10 +16,6 @@
           <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
               {{csrf_field()}}
               <div class="form-group">
-               <div class="text-center">
-                <button type="submit" class="btn btn-default" >
-                  <i class="glyphicon glyphicon-plus"></i> 作成</button>
-              </div>
                 <label for="due_date">日時変更</label>
                 <input type="text" class="form-control" name="due_date" id="due_date" value="<?php echo date('Y-m-j');?>"
                  />
@@ -28,6 +24,11 @@
                 <textarea rows="20" class="form-control" name="list_name" value="{{ old('title') }}" ></textarea>
               </div>
             </div>
+            <div class="form-group">
+               <div class="text-center">
+                <button type="submit" class="btn btn-default" >
+                  <i class="glyphicon glyphicon-plus"></i> 作成</button>
+              </div>
           </form>
       </div>
     </div>

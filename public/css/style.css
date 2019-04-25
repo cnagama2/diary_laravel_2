@@ -12,9 +12,12 @@ body {
   width: 100%;
 }
 .index_head {
+  font-size: 18px;
+  font-weight: bold;
   padding: 20px;
   display: table-cell;
 }
+
 .index_item {
   display: table-cell;
   text-align: center;

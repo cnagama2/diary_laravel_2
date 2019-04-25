@@ -27,6 +27,6 @@
       
     </table>
     </div>
-      <div class="index">{{ $listings->links() }}</div>
+      <div class="index text-center">{{ $listings->links() }}</div>
  </div>
 @endsection
