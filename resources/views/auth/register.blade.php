@@ -26,42 +26,38 @@
 			<div class="card-header">
 				<h3>アカウント作成</h3>
 			</div>
-			<div class="card-body">
-   <p class="text-center m-3">or</p>
-
+		<div class="card-body">
+     <p class="text-center m-3">or</p>
      <p class="acountPage_link"><a href="{{ route('login') }}">Log In</a></p>
-
-   
-     <form class="new_user" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
+    <form class="new_user" id="new_user" action="{{ route('register') }}" accept-charset="UTF-8" method="post">
        {{ csrf_field() }}
-       <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-         <label for="user_name">お名前</label>
-         <input class="form-control" placeholder="名前を入力してください" type="text" name="name" value="{{ old('name') }}" required autofocus>
-
+    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+      <label for="user_name">お名前</label>
+        <input class="form-control" placeholder="名前を入力してください" type="text" name="name" value="{{ old('name') }}" required autofocus>
          @if ($errors->has('name'))
-           <span class="help-block">
-             <strong>{{ $errors->first('name') }}</strong>
-           </span>
+        <span class="help-block">
+          <strong>{{ $errors->first('name') }}</strong>
+        </span>
          @endif
-       </div>
-       <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-          <label for="user_email">メールアドレス</label>
-         <input class="form-control" placeholder="emailを入力してください" autocomplete="email" type="email" name="email" value="{{ old('email') }}" required>
+    </div>
+    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+      <label for="user_email">メールアドレス</label>
+        <input class="form-control" placeholder="emailを入力してください" autocomplete="email" type="email" name="email" value="{{ old('email') }}" required>
            @if ($errors->has('email'))
-             <span class="help-block">
+            <span class="help-block">
                <strong>{{ $errors->first('email') }}</strong>
-             </span>
+            </span>
            @endif
-       </div>
-       <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-         <label for="user_password">パスワード</label>
+    </div>
+      <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+        <label for="user_password">パスワード</label>
          <em>(6文字以上入力してください)</em>
          <br>
-         <input class="form-control" placeholder="パスワードを入力してください" autocomplete="off" type="password" name="password" required>
+        <input class="form-control" placeholder="パスワードを入力してください" autocomplete="off" type="password" name="password" required>
            @if ($errors->has('password'))
-             <span class="help-block">
-               <strong>{{ $errors->first('password') }}</strong>
-             </span>
+            <span class="help-block">
+             <strong>{{ $errors->first('password') }}</strong>
+            </span>
            @endif
        </div>
        <div class="form-group">
@@ -72,11 +68,11 @@
        <div class="form-group">
          <input type="submit" name="commit" value="アカウントを作成" class="btn login_btn" data-disable-with="アカウントを作成">
        </div>
-     </div>
-   </form>
-</div>
-</div>
-</div>
+      </div>
+    </form>
+   </div>
+  </div>
+ </div>
 </div>
 </div>
 </body>

@@ -38,34 +38,31 @@
 <!-- ログインしている場合のみヘッダを表示する --->
 @auth
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #712827;">
- <div class ="container">
+<div class ="container">
  <div class="navbar-header">
-  <span class="navbar-brand">DIARY
-  </span>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+  <span class="navbar-brand">DIARY</span>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
       <span class="sr-only">メニュー</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-  </div>
+ </div>
  
-  <div id="gnavi" class="collapse navbar-collapse">
+ <div id="gnavi" class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
       <li><a class="nav-link" href="#">{{Auth::user()->name }}さん</a></li>
       <li><a class="nav-link listNew" href="/">一覧</a></li>
       <li><a class="nav-link listNew" href="{{ route('new') }}">新規作成</a></li>
       <li><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-             <i class="glyphicon glyphicon-log-out"></i>ログアウト</a>
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        <i class="glyphicon glyphicon-log-out"></i>ログアウト</a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                {{ csrf_field() }}
-             </form></li>
+         </form></li>
     </ul>
-  </div></div>
- 
+ </div>
+</div>
 </nav>
-
-
 @endauth
 @yield('content')
 </body>

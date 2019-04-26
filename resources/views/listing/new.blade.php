@@ -10,28 +10,28 @@
         ?>です。
       </li>
     </ul>
-      <div class="panel-body">
-          <!-- バリデーションエラーの場合に表示 -->
+    <table class="table table-hover return-table-responsive">
+      <tr>
+        <!-- バリデーションエラーの場合に表示 -->
           @include('common.errors')
-          <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
+        <form action="{{ url('listings') }}" method="POST" class="form-horizontal" >
               {{csrf_field()}}
-              <div class="form-group">
-                <label for="due_date">日時変更</label>
-                <input type="text" class="form-control" name="due_date" id="due_date" value="<?php echo date('Y-m-j');?>"
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" class="btn btn-default" >
+                <i class="glyphicon glyphicon-plus"></i> 作成</button>
+          　</div>
+          <div class="form-group">
+            <label for="due_date">日時変更</label>
+             <input type="text" class="form-control" name="due_date" id="due_date" value="<?php echo date('Y-m-j');?>"
                  />
-             </div>
-              <div class="form-group">
-                <textarea rows="20" class="form-control" name="list_name" value="{{ old('title') }}" ></textarea>
-              </div>
-            </div>
-            <div class="form-group">
-               <div class="text-center">
-                <button type="submit" class="btn btn-default" >
-                  <i class="glyphicon glyphicon-plus"></i> 作成</button>
-              </div>
-          </form>
-      </div>
-    </div>
+          </div>
+          <div class="form-group">
+            <textarea rows="20" class="form-control" name="list_name" value="{{ old('title') }}" ></textarea>
+          </div>
+        </form>
+      </tr>
+    </table>
   </div>
 </div>
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
@@ -39,8 +39,8 @@
   <script>
     /* global flatpickr */
       flatpickr(document.getElementById('due_date'), {
-         locale:"ja",
-         dateFormat: "Y-m-d",
+      locale:"ja",
+      dateFormat: "Y-m-d",
     });
   </script>
 @endsection
