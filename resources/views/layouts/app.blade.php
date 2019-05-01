@@ -11,14 +11,11 @@
    <title>Diary</title>
 
    <!-- Styles(ローカルの場合、secure_asset=>assetにすること) -->
-   <link href="{{ secure_asset('css/sign_up.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/sign_in.css') }}" rel="stylesheet">
-   {{--<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">--}}
-   {{--<link href="{{ secure_asset('css/button.css') }}" rel="stylesheet">--}}
+   <!--normalize-->
+   <link href="{{ secure_asset('css/normalize.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/common.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/list_new.css') }}" rel="stylesheet">
-   <link href="{{ secure_asset('css/list_edit.css') }}" rel="stylesheet">
+   <link href="{{ secure_asset('css/header.css') }}" rel="stylesheet">
    <link href="{{ secure_asset('css/login.css') }}" rel="stylesheet">
 
     <!-- awesome fonts -->
