@@ -29,7 +29,7 @@
 			    <div class="input-group-prepend">
 				    <span class="input-group-text"><i class="fas fa-user"></i></span>
 			    </div>
-			     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+			     <input id="email" type="email" class="form-control" name="email" placeholder="メールアドレス" value="{{ old('email') }}">
 			      @if ($errors->has('email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('email') }}</strong>
@@ -40,7 +40,7 @@
 			    <div class="input-group-prepend">
 				   <span class="input-group-text"><i class="fas fa-key"></i></span>
 			    </div>
-			    <input id="password" type="password" class="form-control" name="password" required>
+			    <input id="password" type="password" class="form-control" name="password" placeholder="パスワード" required>
 			  @if ($errors->has('password'))
                 <span class="help-block">
                   <strong>{{ $errors->first('password') }}</strong>
