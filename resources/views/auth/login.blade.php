@@ -4,6 +4,13 @@
     <title>Diary</title>
   <!--normalizeスタイルシート-->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
 	<!--カスタムスタイルシート読み込み-->
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
@@ -14,7 +21,7 @@
 
 	
 	<div class="main-body">
-			  <span class="input-group">log in</span>
+			  <h1>log in</h1>
 			
 		  <form class="new_user" id="new_user" action="{{ route('login') }}" accept-charset="UTF-8" method="post">
              {{ csrf_field() }}
@@ -41,7 +48,7 @@
               @endif
         </div>
 			  <div class="input-group form-group">
-			  <input type="submit" name="commit" value="Login" class="btn float-right loginBtn">
+			  <input type="submit" name="commit" value="Login" class="btn loginBtn">
 			  </div>
 		  </form>
 	</div><!--main-body終了-->

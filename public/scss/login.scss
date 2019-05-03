@@ -14,23 +14,37 @@ text-align:center;
    #logo {
     padding:10px ; 
    }
-   
     .input-group{
       padding:10px;
-      
-    .input-group span{
+      margin-top:10px;
       font-size: 1.2em;
       color:black;
-    }
+}
+
+h1 {
+  font-size:1.2em;
+}
+
+
     
-    .new_user {
-      
+.new_user {
+   .form-group {
+     max-width: 500px;
+     margin: 0 auto 1rem;
+     .form-control {
+       background: #f6f8fa;
+       }
     }
-  }
+ }
+  
+}
+
+.main-body{
+  margin:30px;
 }
 
 .main-footer {
-  padding: 30px;
+  padding: 20px;
 }
 
 .input-group-prepend span{
@@ -40,11 +54,16 @@ color: black;
 border:0 !important;
 }
 
+.fas {
+  margin: 0 auto;
+}
+
 input:focus{
 outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
 
 }
+
 
  .loginBtn {
    padding: 12px;
@@ -54,7 +73,7 @@ box-shadow: 0 0 0 0 !important;
    color: #fff;
    text-align:center;
    border: none;
-   margin-top: 20px;
+   margin: 0 auto ;
    opacity: 1;
    transition: opacity .5s;
    cursor: pointer;

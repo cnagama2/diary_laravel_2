@@ -15,19 +15,34 @@
 }
 .main .input-group {
   padding: 10px;
-}
-.main .input-group .input-group span {
+  margin-top: 10px;
   font-size: 1.2em;
   color: black;
 }
+.main h1 {
+  font-size: 1.2em;
+}
+.main .new_user .form-group {
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+.main .new_user .form-group .form-control {
+  background: #f6f8fa;
+}
+.main-body {
+  margin: 30px;
+}
 .main-footer {
-  padding: 30px;
+  padding: 20px;
 }
 .input-group-prepend span {
   width: 50px;
   background-color: #1e90ff;
   color: black;
   border: 0 !important;
+}
+.fas {
+  margin: 0 auto;
 }
 input:focus {
   outline: 0 0 0 0 !important;
@@ -41,7 +56,7 @@ input:focus {
   color: #fff;
   text-align: center;
   border: none;
-  margin-top: 20px;
+  margin: 0 auto;
   opacity: 1;
   transition: opacity 0.5s;
   cursor: pointer;
