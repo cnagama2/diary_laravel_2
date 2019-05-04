@@ -50,7 +50,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a class="nav-link" href="#">{{Auth::user()->name }}さん</a></li>
       <li><a class="nav-link listNew" href="/">一覧</a></li>
-      <li><a class="nav-link listNew" href="{{ route('new') }}">新規作成</a></li>
+      <li><a class="nav-link listNew" href="{{ route('new') }}"><i class="glyphicon glyphicon-plus"></i> 新規作成</a></li>
       <li><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
         <i class="glyphicon glyphicon-log-out"></i>ログアウト</a>
          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

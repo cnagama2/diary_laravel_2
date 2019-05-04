@@ -1,30 +1,36 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin: 0 auto;
   padding-top: 50px;
 }
+
 .indexbar {
   display: table;
   width: 100%;
   background: #f5f5f5;
 }
+
 .index_head {
-  text-align: center;
+  text-align:center;
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px;
   display: table-cell;
 }
+
 .index_item {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  width: 200px;
+  width:200px;
 }
+
 .indexbar_edit {
   display: table;
   width: 100%;
 }
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -32,19 +38,24 @@ table {
   table-layout: fixed;
   width: 100%;
 }
+
 table th {
   background-color: #f5f5f5;
-  width: auto;
-}
+  width:auto;
+  }
+ 
 table td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 0;
-}
+  }
+
 @media only screen and (max-width: 800px) {
-  table .return-table-responsive th, table .return-table-responsive td {
+  table .return-table-responsive th,
+  table .return-table-responsive td {
     display: block;
     width: 100%;
   }
+  
 }

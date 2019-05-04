@@ -27,6 +27,7 @@
              </button>
            </li>
           </ul>
+          <div class="text-center">
          <label for="due_date">日時変更</label>
           <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date', $listing->due_date) }}"
                  />
@@ -35,7 +36,7 @@
           <textarea rows="20" name="list_name" class="form-control">{{ old('list_name', $listing->title) }}</textarea>
             </div>
               <input type="hidden" name="id" value="{{ old('id', $listing->id) }}">
-        </div>
+        </div></div>
       </form>
      </tr>
     </table>
